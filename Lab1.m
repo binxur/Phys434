@@ -33,7 +33,7 @@ plot(x,pdf(expD,x),"LineWidth",4);
 % 3C
 % probablity = 1 - integral(expD, -Inf, 5)
 % 3D
-pb = 1 - cdf(expD, 6);
+pb = 1 - cdf(expD, 6);   %if it should be 5？
 % 3E
 sigma = norminv(1 - pb);
 % 4
@@ -54,6 +54,7 @@ sigma_8 = norminv(1 - pb_8);
 x = 0:50;
 %Number of trials set to 34 Probability of success as 0.7
 bin = makedist("Binomial",'N',34, 'p',0.7); 
+ %should start a new figure
 subplot(2,2,1)
 stairs(x,pdf(bin,x),"LineWidth",3);
 subplot(2,2,2)
@@ -61,9 +62,9 @@ stairs(x-5,pdf(bin,x),"LineWidth",3);
 x = 0:100;
 %Number of trials set to 69 Probability of success as 0.05
 bin = makedist("Binomial",'N',84, 'p',0.05); 
-subplot(2,2,1)
+subplot(2,2,1) %here should be 2,2,3
 stairs(x,pdf(bin,x),"LineWidth",3);
-subplot(2,2,2)
+subplot(2,2,2) %here should be 2,2,4
 stairs(x-5,pdf(bin,x),"LineWidth",3);
 % 1C
 % What is the probability of finding signal between x=3 and x=5 in
@@ -78,5 +79,6 @@ pb = cdf(bin, 5) - cdf(bin, 3);
 % mean or expectation of a Binominal distribution is probability-weighted 
 % average of all its possible values. This probability-weight process works
 % for both continuous and discrete.
-% I think the random variables are continuously changing.
+% I think the random variables are continuously changing.  %I don't understand what continuously cganging is. If you zoom your
+                                                           %graph, it's stairs shape, the variable x should not be continuous
 
