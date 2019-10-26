@@ -1,0 +1,556 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:DengXian;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@DengXian";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:DengXian;}
+.MsoChpDefault
+	{font-family:DengXian;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN style='text-justify-trim:punctuation'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>clc;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>clear;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%1</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%A</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%While
+summing for more days the distribution remain same.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>x =
+0:10;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>poisson1
+= poisspdf(x,3);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>figure()</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>subplot(2,2,1)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>stairs(x,poisson1,</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#A020F0'>&quot;LineWidth&quot;</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>,4);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>title(</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#A020F0'>'1
+Day data'</span><span lang=EN-US style='font-size:13.0pt;font-family:"Courier New";
+color:black'>)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'> </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>x =
+0:20;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>poisson2
+= conv(poisson1,poisson1);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>subplot(2,2,2)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>stairs(x,poisson2,</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#A020F0'>&quot;LineWidth&quot;</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>,4);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>title(</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#A020F0'>'2
+Days data'</span><span lang=EN-US style='font-size:13.0pt;font-family:"Courier New";
+color:black'>)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'> </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>x =
+0:30;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>poisson3
+= conv(poisson2,poisson1);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>subplot(2,2,3)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>stairs(x,poisson3,</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#A020F0'>&quot;LineWidth&quot;</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>,4);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>title(</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#A020F0'>'3
+Days data'</span><span lang=EN-US style='font-size:13.0pt;font-family:"Courier New";
+color:black'>)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'> </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>x =
+0:40;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>poisson4
+= conv(poisson3,poisson1);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>subplot(2,2,4)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>stairs(x,poisson4,</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#A020F0'>&quot;LineWidth&quot;</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>,4);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>title(</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#A020F0'>'4
+Days data'</span><span lang=EN-US style='font-size:13.0pt;font-family:"Courier New";
+color:black'>);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%B</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%After
+five days convolution the summed probability distribution remain same.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%The
+summed distribution remain same because convolution </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%represents
+the area of overlap under two distribution. Since both</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%distributions
+are same the overlap should remain same.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%Since
+the data from each day is poisson distribution,the sum of poisson</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%distribution
+should remain with different mean.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%C</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%Since
+the data from each day is poisson distribution,the sum of poisson</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%distribution
+should remain poisson with increased mean.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'> </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%2</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%A</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>x =
+0:2/200:2;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>probd
+= raylpdf(x,0.5);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'> </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>figure()</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>subplot(2,2,1)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>plot(x,probd)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>title(</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#A020F0'>'Original
+data'</span><span lang=EN-US style='font-size:13.0pt;font-family:"Courier New";
+color:black'>)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'> </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>x =
+0:0.01:4;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>probd1
+= conv(probd,probd);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>subplot(2,2,2)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>plot(x,probd1)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>title(</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#A020F0'>'1
+Average interval'</span><span lang=EN-US style='font-size:13.0pt;font-family:
+"Courier New";color:black'>)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'> </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>x =
+0:0.01:6;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>probd2
+= conv(probd1,probd);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>subplot(2,2,3)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>plot(x,probd2)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>title(</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#A020F0'>'2
+Average interval'</span><span lang=EN-US style='font-size:13.0pt;font-family:
+"Courier New";color:black'>)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'> </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>x =
+0:0.01:8;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>probd3
+= conv(probd2,probd);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>subplot(2,2,4)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>plot(x,probd3)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>title(</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#A020F0'>'3
+Average interval'</span><span lang=EN-US style='font-size:13.0pt;font-family:
+"Courier New";color:black'>)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%The
+distribution will be less skew and getting closer to Gaussian distribution over</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%more
+observing intervals.The new distribution have a higher peak.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%B</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>probd4
+= conv(probd3,probd);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>x =
+0:0.01:(length(probd4)-1)*0.01;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>figure()</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>plot(x,probd4)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>title(</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#A020F0'>'4
+Average interval)'</span><span lang=EN-US style='font-size:13.0pt;font-family:
+"Courier New";color:black'>)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'> </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>probd5
+= conv(probd4,probd);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>x =
+0:0.01:(length(probd5)-1)*0.01;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>figure()</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>plot(x,probd5)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>title(</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#A020F0'>'5
+Average interval)'</span><span lang=EN-US style='font-size:13.0pt;font-family:
+"Courier New";color:black'>)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'> </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>probd6
+= conv(probd5,probd);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>x =
+0:0.01:(length(probd6)-1)*0.01;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>figure()</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>plot(x,probd6)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>title(</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#A020F0'>'6
+Average interval)'</span><span lang=EN-US style='font-size:13.0pt;font-family:
+"Courier New";color:black'>)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%After
+6 convolution graph looks similar to Gaussian distribution.I think</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%it
+would reach gaussian distribution once the mean reach center of</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%distribution.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'> </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%3</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%A</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%Set
+width as 10, and Y as 19.97</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>X =
+4;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>Y =
+19.97;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%The
+background distribution graph</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>bg =
+makedist(</span><span lang=EN-US style='font-size:13.0pt;font-family:"Courier New";
+color:#A020F0'>'Normal'</span><span lang=EN-US style='font-size:13.0pt;
+font-family:"Courier New";color:black'>,</span><span lang=EN-US
+style='font-size:13.0pt;font-family:"Courier New";color:#A020F0'>'sigma'</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>,X);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>x =
+-30:30;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>figure()</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>plot(x,pdf(bg,x))</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>title(</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#A020F0'>'Background'</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%Assume
+all signal strength is larger than Y is the signal we want</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>s_pd
+= 1-cdf(bg,Y)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>sigma
+= norminv(1-s_pd)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%sigma
+=  4.9925&lt;5, therefore it isn't a discovery but really close</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%B</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%what
+is the probability distribution with same but 10k larger background?</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%Probability
+distribution function of 10k pixels should be 10k*background pdf.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>N =
+10000;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>figure()</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>plot(x,N*pdf(bg,x))</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>title(</span><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#A020F0'>'Background
+with 10k pixels'</span><span lang=EN-US style='font-size:13.0pt;font-family:
+"Courier New";color:black'>)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'> </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%C</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>s_pd2
+= N*s_pd;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>sigma2
+= norminv(1-s_pd2)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%sigma
+of 10k pixel is 2.75</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%A</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>pd_5
+= normcdf(5);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>signal
+= icdf(bg,1-pd_5)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%signal
+required for a 5-sigma detection in Version 1 is -20</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%B</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:black'>signal2
+= icdf(bg,1-pd_5/N)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%signal
+required for a 5-sigma detection in Version 2 is 14.8761</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%C</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%For
+factor of 10k, signal must be brighter than signal2 which is 14.8761</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%The
+the sensitivity penalty is neglect compare to large factors.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%D</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%The
+probability within 5 sigma of a standard normal distribution will</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%not
+change. But if trials factor decrease with orders the </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:13.0pt;font-family:"Courier New";color:#3C763D'>%5-sigma
+sensitivity penalty will not be neglectable.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
